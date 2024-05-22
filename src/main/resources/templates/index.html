@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FindJob - Your Gateway to Employment Opportunities</title>
+    <style>
+        :root {
+            --primary-color: #00b4db;
+            --secondary-color: #0083b0;
+            --background-color: #f4f7f6;
+            --text-color: #fff;
+            --button-color: #007BFF;
+            --button-hover-color: #0056b3;
+            --container-bg-color: rgba(255, 255, 255, 0.1);
+            --container-border-radius: 10px;
+            --container-padding: 40px;
+            --container-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: var(--text-color);
+            text-align: center;
+        }
+        .container {
+            background: var(--container-bg-color);
+            padding: var(--container-padding);
+            border-radius: var(--container-border-radius);
+            box-shadow: var(--container-shadow);
+        }
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 1.2em;
+            line-height: 1.5;
+        }
+        .buttons {
+            margin-top: 30px;
+        }
+        .buttons a {
+            display: inline-block;
+            margin: 10px;
+            padding: 15px 25px;
+            font-size: 1em;
+            color: var(--text-color);
+            background-color: var(--button-color);
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .buttons a:hover {
+            background-color: var(--button-hover-color);
+        }
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+            h1 {
+                font-size: 2.5em;
+            }
+            p {
+                font-size: 1em;
+            }
+            .buttons a {
+                padding: 10px 20px;
+                font-size: 0.9em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to FindJob</h1>
+        <p>FindJob is your gateway to employment opportunities. Whether you are an employee seeking a new job or an employer looking for the right talent, our platform makes it easy and efficient for you to connect.</p>
+        <p>As an employee, you can quickly find job opportunities that match your skills and experience. As an employer, you can easily find qualified employees by their occupation.</p>
+        <p>Join us today and take the first step towards a brighter future!</p>
+        <div class="buttons">
+            <a href="/findjob/login">Login</a>
+            <a href="/findjob/signup">Sign Up</a>
+        </div>
+    </div>
+</body>
+</html>

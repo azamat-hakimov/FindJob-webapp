@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Details - FindJob</title>
+    <style>
+        :root {
+            --primary-color: #00b4db;
+            --secondary-color: #0083b0;
+            --background-color: #f4f7f6;
+            --text-color: #333;
+            --button-color: #007BFF;
+            --button-hover-color: #0056b3;
+            --container-bg-color: #fff;
+            --container-border-radius: 10px;
+            --container-padding: 20px;
+            --container-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: var(--text-color);
+        }
+        .container {
+            width: 90%;
+            max-width: 500px;
+            padding: var(--container-padding);
+            background-color: var(--container-bg-color);
+            color: var(--text-color);
+            border-radius: var(--container-border-radius);
+            box-shadow: var(--container-shadow);
+            text-align: center;
+        }
+        h2 {
+            margin-bottom: 20px;
+        }
+        .detail {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+        .detail label {
+            font-weight: bold;
+        }
+        .button-container {
+            margin-top: 20px;
+        }
+        .button-container button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: var(--button-color);
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .button-container button:hover {
+            background-color: var(--button-hover-color);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Employee Details</h2>
+        <div class="detail">
+            <label>Occupation:</label>
+            <span th:text="${employee.occupation}"></span>
+        </div>
+        <div class="detail">
+            <label>About Employee and Contact Details:</label>
+            <span th:text="${employee.msg}"></span>
+        </div>
+    </div>
+</body>
+</html>

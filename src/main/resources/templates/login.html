@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - FindJob</title>
+    <style>
+        :root {
+            --primary-color: #00b4db;
+            --secondary-color: #0083b0;
+            --background-color: #f4f7f6;
+            --text-color: #333;
+            --button-color: #007BFF;
+            --button-hover-color: #0056b3;
+            --container-bg-color: #fff;
+            --container-border-radius: 10px;
+            --container-padding: 20px;
+            --container-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: var(--text-color);
+        }
+        .container {
+            width: 300px;
+            padding: var(--container-padding);
+            background-color: var(--container-bg-color);
+            color: var(--text-color);
+            border-radius: var(--container-border-radius);
+            box-shadow: var(--container-shadow);
+            text-align: center;
+            margin-top: 50px; /* Adjusted margin-top */
+        }
+        .error-message {
+            color: red; /* Set text color to red */
+            margin-top: 10px;
+            font-weight: bold; /* Make the text bold */
+        }
+        h2 {
+            margin-bottom: 20px;
+            color: var(--text-color);
+        }
+        input[type="text"], input[type="password"] {
+            width: calc(100% - 22px); /* Adjusted width */
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+            box-sizing: border-box; /* Ensure padding doesn't increase element width */
+        }
+        button {
+            width: calc(100% - 22px); /* Adjusted width */
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: var(--button-color);
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: var(--button-hover-color);
+        }
+        .links {
+            margin-top: 15px;
+        }
+        .links a {
+            color: var(--button-color);
+            text-decoration: none;
+            transition: text-decoration 0.3s ease;
+        }
+        .links a:hover {
+            text-decoration: underline;
+        }
+        @media (max-width: 600px) {
+            .container {
+                width: 90%;
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Login to FindJob</h2>
+        <form action="/findjob/login" method="post">
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <button type="submit">Login</button>
+        </form>
+        <div class="error-message" th:if="${error}">
+            <span th:text="${error}"></span>
+        </div>
+        <div class="links">
+            <a href="/findjob/signup">Don't have an account? Sign up</a>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connect with Your Employer</title>
+    <style>
+        :root {
+            --primary-color: #00b4db;
+            --secondary-color: #0083b0;
+            --background-color: #f4f7f6;
+            --text-color: #333;
+            --button-color: #007BFF;
+            --button-hover-color: #0056b3;
+            --container-bg-color: #fff;
+            --container-border-radius: 10px;
+            --container-padding: 20px;
+            --container-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: var(--text-color);
+        }
+        .container {
+            width: 90%;
+            max-width: 500px;
+            padding: var(--container-padding);
+            background-color: var(--container-bg-color);
+            color: var(--text-color);
+            border-radius: var(--container-border-radius);
+            box-shadow: var(--container-shadow);
+        }
+        h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: var(--text-color);
+            text-align: center;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+            box-sizing: border-box;
+        }
+        button {
+            width: 100%;
+            padding: 12px;
+            font-size: 16px;
+            color: #fff;
+            background-color: var(--button-color);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: var(--button-hover-color);
+        }
+        @media (max-width: 600px) {
+            .container {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Employee Information</h2>
+        <form action="/findjob/submit" method="post">
+            <label for="occupation">Occupation</label>
+            <input type="text" id="occupation" name="occupation" required>
+            
+            <label for="message">Leave a Message about yourself (Include your contact details)</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
