@@ -17,6 +17,5 @@
 
 - **Backend**: Spring Boot (Java)
 - **Database**: MySQL
-- **Frontend**: Thymeleaf, HTML, CSS, JavaScript
-- **Security**: Spring Security
+- **Frontend**: Thymeleaf, HTML, CSS
 - **Build Tool**: Maven
